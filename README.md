@@ -1,2 +1,6 @@
-# HTMLAcademy__pink
-Макет от HTMLAcademy | Адаптивная вёрстка | БЭМ | SASS + GULP | Mobile First
+# Pink - вёрстка страницы
+
+[x] Адаптивная вёрстка
+[x] БЭМ
+[x] SASS (SCSS)
+[x] GULP
