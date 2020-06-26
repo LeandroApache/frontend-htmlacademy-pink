@@ -1,0 +1,10 @@
+$mobile-width: 320px;
+$tablet-width: 660px;
+$desktop-width: 960px;
+
+
+.page-body {
+  margin: 0;
+  padding: 0;
+  min-width: $mobile-width;
+}

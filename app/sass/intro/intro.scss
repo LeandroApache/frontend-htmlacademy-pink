@@ -1,0 +1,76 @@
+$mobile-width: 320px;
+$tablet-width: 660px;
+$desktop-width: 960px;
+
+@import "scaffolding/scaffolding.scss";
+
+.intro {
+  z-index: 0;
+  position: relative;
+
+  margin-top: -65px;
+  padding-top: 460px;
+
+  background-image: url(https://via.placeholder/320x460);
+  background-size: 100%;
+  background-position: 50%, 50%;
+  background-color: rgb(29, 38, 49);
+}
+
+.intro__wrapper {
+  position: relative;
+  z-index: 1;
+
+  border: 1px solid transparent;
+  background-color: rgb(29, 38, 49);
+}
+
+
+.intro__title {
+  display: none;
+}
+
+.intro__download-link {
+  display: block;
+
+  @extend .reset-link;
+  padding: 15px 40px;
+  margin: 0 auto;
+  margin-top: 20px;
+
+  width: 290px;
+  box-sizing: border-box;
+
+  text-align: center;
+  font-family: "Open Sans Bold", Arial, sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: 18px;
+  line-height: 18px;
+
+  &:hover {
+    color: rgb(210, 40, 86);
+    background-color: #fff;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+    background-color: #fff;
+  }
+}
+
+
+.intro__description-text {
+  display: block;
+
+  margin: 0 auto;
+  margin-top: 25px;
+
+  font-family: "Open Sans Light", Arial, sans-serif;
+  font-size: 14px;
+  text-align: center;
+  line-height: 24px;
+
+  color: white;
+  width: 280px;
+}
