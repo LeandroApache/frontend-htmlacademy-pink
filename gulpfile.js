@@ -25,7 +25,7 @@ function browsersync() {
 }
 
 function startwatch() {
-  watch(["app/sass/**/*.scss"], styles);
+  watch("app/sass/**/*.scss", styles);
   watch("app/**/*.html").on("change", browserSync.reload);
 }
 
