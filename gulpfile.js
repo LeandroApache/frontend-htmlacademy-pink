@@ -5,7 +5,7 @@ const autoprefixer   = require("gulp-autoprefixer");
 const cleancss       = require("gulp-clean-css");
 
 function styles() {
-  return src("app/sass/**/*.scss")
+  return src("app/sass/app.scss")
         .pipe(sass())
         .pipe(autoprefixer( { overrideBrowserlist: ["last 15 versions"] } ))
         .pipe(cleancss( ( {format: "beautify"} ) ))
