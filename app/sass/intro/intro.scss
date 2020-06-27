@@ -1,6 +1,8 @@
 $mobile-width: 320px;
 $tablet-width: 660px;
 $desktop-width: 960px;
+$minimal-resolution-dpi: 144dpi;
+$minimal-resolution-dppx: 1.5dppx;
 
 @import "scaffolding/scaffolding.scss";
 
@@ -9,17 +11,34 @@ $desktop-width: 960px;
   position: relative;
 
   margin-top: -65px;
-  padding-top: 460px;
+  padding-top: calc(1.4375*100%);
 
-  background-image: url(https://via.placeholder/320x460);
+  background-image: url("../images/bg-mobile@1x.jpg");
+
+  @media (min-resolution: $minimal-resolution-dpi), (min-resolution: $minimal-resolution-dppx) {
+    background-image: url("../images/bg-mobile@2x.jpg");
+  }
   background-size: 100%;
-  background-position: 50%, 50%;
+  background-repeat: no-repeat;
+  background-position: top center;
   background-color: rgb(29, 38, 49);
 }
 
 .intro__wrapper {
+  width: 100%;
+  max-width: 960px;
+
+  margin: 0 auto;
+}
+
+.intro__container {
   position: relative;
   z-index: 1;
+  max-width: 960px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
   border: 1px solid transparent;
   background-color: rgb(29, 38, 49);
@@ -27,6 +46,11 @@ $desktop-width: 960px;
 
 
 .intro__title {
+  font-size: 40px;
+  line-height: 50px;
+  font-family: "Open Sans Light", Arial, sans-serif;
+  color: white;
+
   display: none;
 }
 
@@ -59,6 +83,42 @@ $desktop-width: 960px;
   }
 }
 
+.intro__download-list {
+  @extend .reset-list;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+  margin-top: 40px;
+  margin-left: -30px;
+}
+
+.intro__download-item {
+  margin-left: 30px;
+}
+
+.intro__download-link-icon {
+  display: block;
+
+  width: 55px;
+  height: 60px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.download-link-icon--apple {
+  background-image: url("../images/logo-apple.svg");
+}
+
+.download-link-icon--android {
+  background-image: url("../images/logo-android.svg");
+}
+
+.download-link-icon--windows {
+  background-image: url("../images/logo-microsoft.svg");
+}
+
 
 .intro__description-text {
   display: block;
@@ -71,6 +131,65 @@ $desktop-width: 960px;
   text-align: center;
   line-height: 24px;
 
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
   width: 280px;
+}
+
+
+@media (min-width: $tablet-width){
+  .intro {
+    height: 730px;
+    padding: 1px;
+    margin-top: -110px;
+
+    background-image: url("../images/bg-tablet@1x.jpg");
+    background-position: top center;
+    background-size: cover;
+
+    @media (min-resolution: $minimal-resolution-dpi), (min-resolution: $minimal-resolution-dppx) {
+      background-image: url("../images/bg-tablet@2x.jpg");
+    }
+  }
+
+    .intro__wrapper {
+      margin-top: 200px;
+    }
+
+    .intro__container {
+      margin-left: 20px;
+      width: 300px;
+
+
+      background: none;
+    }
+
+    .intro__title {
+      width: 200px;
+      margin: 0 auto;
+      text-align: center;
+
+      display: block;
+    }
+  }
+
+@media (min-width: $desktop-width) {
+  .intro {
+    height: 850px;
+
+      background-image: url("../images/bg-desktop@1x.jpg");
+      background-position: top center;
+      background-size: cover;
+
+    @media (min-resolution: $minimal-resolution-dpi), (min-resolution: $minimal-resolution-dppx) {
+      background-image: url("../images/bg-desktop@2x.jpg");
+    }
+  }
+
+  .intro__wrapper {
+    margin-top: 430px;
+  }
+
+  .intro__title {
+    display: none;
+  }
 }

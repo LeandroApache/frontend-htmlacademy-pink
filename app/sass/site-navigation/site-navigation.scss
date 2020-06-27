@@ -26,14 +26,10 @@ $desktop-width: 960px;
   height: 100%;
 
   background-repeat: no-repeat;
-  background-image: url("../images/logotype-white-mobile.png");
+  background-image: url("../images/logotype-white-mobile.svg");
 
   &:hover {
-    background-image: url("../images/logotype-pink-mobile.png");
-  }
-
-  &:active {
-    background-image: url("../images/logotype-grey-mobile.png");
+    background-image: url("../images/logotype-pink-mobile.svg");
   }
 }
 
@@ -42,7 +38,9 @@ $desktop-width: 960px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 35px;
+  right: 40px;
+
+  padding: 0;
 
   border: none;
 
@@ -130,7 +128,9 @@ $desktop-width: 960px;
 
 
 .site-navigation__list {
-  @extend .reset-list;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 
   display: none;
 }
@@ -172,8 +172,6 @@ $desktop-width: 960px;
 
   .site-navigation--active-menu {
 
-    background-color: rgb(40, 54, 69);
-
     .site-navigation__list {
     display: block;
     }
@@ -188,6 +186,7 @@ $desktop-width: 960px;
 
     .site-navigation__header {
       position: relative;
+      background-color: rgb(40, 54, 69);
     }
   }
 
@@ -217,7 +216,18 @@ $desktop-width: 960px;
   .site-navigation__logo {
     width: 150px;
     height: 40px;
-    margin-top: 20px;
+    margin-top: 5px;
+  }
+
+  .site-navigation__logo-link {
+    background-image: url("../images/logotype-white-tablet.svg");
+
+    &:hover {
+      background-image: url("../images/logotype-pink-tablet.svg");
+    }
+    &:active {
+      background-image: url("../images/logotype-grey-tablet.svg");
+    }
   }
 
 }
@@ -230,6 +240,21 @@ $desktop-width: 960px;
     align-items: center;
 
     margin: 0 auto;
+  }
+
+  .site-navigation__logo {
+    margin-top: 10px;
+  }
+
+  .site-navigation__logo-link {
+    background-image: url("../images/logotype-white-desktop.svg");
+
+    &:hover {
+      background-image: url("../images/logotype-pink-desktop.svg");
+    }
+    &:active {
+      background-image: url("../images/logotype-grey-desktop.svg");
+    }
   }
 
   .site-navigation__button {
