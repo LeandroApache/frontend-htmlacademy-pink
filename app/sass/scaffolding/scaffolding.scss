@@ -1,7 +1,8 @@
 $mobile-width: 320px;
 $tablet-width: 660px;
 $desktop-width: 960px;
-
+$minimal-resolution-dpi: 144dpi;
+$minimal-resolution-dppx: 1.5dppx;
 
 .visually-hidden {
 	position: absolute !important;

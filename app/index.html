@@ -13,7 +13,7 @@
   <header class="page-header">
 
     <!-- Навигация -->
-    <nav class="page-header__navigation site-navigation">
+    <nav class="page-header__navigation site-navigation site-navigation--no-js">
 
 
       <div class="site-navigation__wrapper">
@@ -88,31 +88,75 @@
     <section class="page-main__information information">
       <h2 class="visually-hidden">Информация о приложении</h2>
       <p class="information__slogan slogan--top">Устали от серости мегаполиса?</p>
-      <p class="information__slogan slogan--bottom">Нам есть, что вам предложить!</p>
+      <p class="information__slogan slogan--bottom">Нам есть, <br> что вам предложить!</p>
 
-      <div class="information__feature-item">
-        <b class="information__feature-fact">Поднимает настроение</b>
-        <p class="information__feature-detailed">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-      </div>
-      <div class="information__feature-item">
-        <b class="information__feature-fact">Меняет мир вокруг</b>
-        <p class="information__feature-detailed">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-      </div>
-      <div class="information__feature-item">
-        <b class="information__feature-fact">Заводит новых друзей</b>
-        <p class="information__feature-detailed">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-      </div>
+      <div class="information__wrapper">
+        <div class = "information__features-container">
+          <div class="information__feature-item">
+            <b class="information__feature-title">Поднимает настроение</b>
+            <p class="information__feature-detailed">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+          </div>
+          <div class="information__feature-item">
+            <b class="information__feature-title">Меняет мир вокруг</b>
+            <p class="information__feature-detailed">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          </div>
+          <div class="information__feature-item">
+            <b class="information__feature-title">Заводит новых друзей</b>
+            <p class="information__feature-detailed">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+          </div>
+        </div>
 
-      <div class="information__app-photo-container">
-        <img class = "information__app-photo-image"
-              width = 160 height = 320
-              src ="https://via.placeholder.com/160x320"
-              alt="Обработанное розовым фото со смайликом и надписью 'Всем привет!'">
-      </div>
-      <div class="information__feature-item feature-item--large">
-        <b class = "information__feature-fact feature-fact--large">Эффект на 24 часа!</b>
-        <p class="information__feature-detailed feature-detailed--wide">Британские ученые провели ииследование и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-        <a href="" class="information__link">Узнать больше об исследовании</a>
+        <div class="information__photo-wrapper">
+
+          <p class="information__photo-container">
+            <picture>
+              <source media = "(min-width: 960px)"
+                    srcset = "../images/desktop-iphone-background1@1x.png 1x,
+                              ../images/desktop-iphone-background1@2x.png 2x">
+
+              <source media = "(min-width: 660px)"
+                    srcset = "../images/tablet-iphone-background@1x.png 1x,
+                              ../images/tablet-iphone-background@2x.png 2x">
+
+              <img class = "information__photo-image"
+                    width = 160 height = 320
+                    src ="../images/iphone-screen-1@1x.png 1x"
+                    srcset = "../images/iphone-screen-1@2x.png 2x"
+                    alt="Обработанное розовым фото со смайликом и надписью 'Всем привет!'">
+            </picture>
+          </p>
+
+          <p class="information__photo-container">
+            <picture>
+              <source media = "(min-width: 960px)"
+                    srcset = "../images/desktop-iphone-background2@1x.png 1x,
+                              ../images/desktop-iphone-background2@2x.png 2x">
+
+              <img class = "information__photo-image"
+                    width = 160 height = 320
+                    src =""
+                    alt="kas">
+            </picture>
+          </p>
+
+          <p class="information__photo-container">
+            <picture>
+              <source media = "(min-width: 960px)"
+                    srcset = "../images/desktop-iphone-background3@1x.png 1x,
+                              ../images/desktop-iphone-background3@2x.png 2x">
+
+              <img class = "information__photo-image"
+                    width = 160 height = 320
+                    src =""
+                    alt="as">
+            </picture>
+          </p>
+        </div>
+        <div class="information__feature-item feature-item--large">
+          <b class = "information__feature-title feature-title--large">Эффект <br> на 24 часа!</b>
+          <p class="information__feature-detailed">Британские ученые провели ииследование и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+          <a href="" class="information__link">Узнать больше об исследовании</a>
+        </div>
       </div>
 
     </section>
@@ -236,6 +280,8 @@
     </div>
   </footer>
 
+
+  <script src = "js/menu.js"></script>
 
 </body>
 </html>
