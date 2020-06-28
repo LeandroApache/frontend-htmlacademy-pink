@@ -1,0 +1,168 @@
+@import "scaffolding/scaffolding.scss";
+
+
+.reviews {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  margin-top: -20px;
+
+  background-color: white;
+}
+
+
+.reviews__review {
+  text-align: center;
+
+  padding: 20px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 820px;
+
+  display: none;
+}
+
+
+.reviews__author {
+  display: block;
+
+  margin: 0;
+  padding: 0;
+  margin-top: 45px;
+
+  font-size: 18px;
+  line-height: 30px;
+  font-family: "Open Sans Bold", Arial, sans-serif;
+  font-weight: 700;
+}
+
+.reviews__text {
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+
+  font-family: "Open Sans Regular", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.reviews__author-description {
+  display: none;
+
+  margin-top: 10px;
+
+
+  font-family: "Open Sans Regular", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.reviews__button {
+  position: absolute;
+  top: 55%;
+
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  border-top-color: rgb(190, 194, 199);
+  border-left-color: rgb(190, 194, 199);
+
+  background: none;
+  display: none;
+  outline: none;
+}
+
+.reviews__button-previous {
+  left: 10px;
+  transform: rotate(-45deg);
+}
+
+.reviews__button-next {
+  right: 10px;
+  transform: rotate(135deg);
+}
+
+.reviews__button:hover,
+.reviews__button:focus {
+  border-top-color: rgb(69, 69, 69);
+  border-left-color: rgb(69, 69, 69);
+}
+
+.reviews__button:active {
+  border-top-color: rgba(69, 69, 69, 0.7);
+  border-left-color: rgba(69, 69, 69, 0.7);
+}
+
+
+.slider__element--active {
+  display: flex;
+}
+
+
+@media (min-width: $tablet-width) {
+  .reviews__author {
+    order: 1;
+    font-size: 20px;
+  }
+
+  .reviews__text {
+    font-size: 18px;
+  }
+
+  .reviews__author-description {
+    display: block;
+    order: 3;
+
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+
+  .reviews {
+      padding-top: 190px;
+      margin-top: 0;
+    }
+
+  .reviews::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 70px;
+    transform: translateX(-50%);
+
+    width: 79px;
+    height: 64px;
+
+    background-image: url("../images/icon-quotes.svg");
+
+  }
+
+  .reviews__review {
+    width: 820px;
+  }
+
+  .reviews__author {
+    font-size: 24px;
+  }
+
+  .reviews__author-description  {
+    font-size: 18px;
+  }
+
+  .reviews__text {
+    margin: 0;
+  }
+
+  .reviews__button {
+    display: block;
+  }
+}

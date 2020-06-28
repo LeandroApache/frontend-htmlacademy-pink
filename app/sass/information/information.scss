@@ -295,8 +295,8 @@
   .feature-item--large {
     width: 960px;
     margin: 0 auto;
-    margin-top: 140px;
-    margin-bottom: 115px;
+    margin-top: 160px;
+    margin-bottom: 135px;
     background: none;
     padding-left: 380px;
 
@@ -310,10 +310,10 @@
 
   .feature-item--large::after {
     top: -100px;
-    left: 10px;
+    left: 20px;
 
-    width: 310px;
-    height: 360px;
+    width: 298px;
+    height: 345px;
   }
 
 }
