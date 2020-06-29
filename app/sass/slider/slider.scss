@@ -9,7 +9,7 @@
 
   left: 50%;
   transform: translate(-50%);
-  bottom: 40px;
+  bottom: 20px;
 
   display: flex;
 }
@@ -41,8 +41,8 @@
 
 
 @media (min-width: $tablet-width) {
-  .slider__radio {
-    bottom: 20px;
+  .slider {
+    padding-bottom: 60px;
   }
 }
 
