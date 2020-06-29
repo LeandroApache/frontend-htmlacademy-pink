@@ -1,5 +1,5 @@
 @import "scaffolding/scaffolding.scss";
-
+@import "animations/animation.scss";
 
 .reviews {
   position: relative;
@@ -78,6 +78,9 @@
   background: none;
   display: none;
   outline: none;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: none;
 }
 
 .reviews__button-previous {
@@ -104,6 +107,8 @@
 
 .slider__element--active {
   display: flex;
+
+  opacity: 1;
 }
 
 

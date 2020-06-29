@@ -4,6 +4,11 @@ $desktop-width: 960px;
 $minimal-resolution-dpi: 144dpi;
 $minimal-resolution-dppx: 1.5dppx;
 
+
+html, body {
+	overflow-x: hidden;
+}
+
 .visually-hidden {
 	position: absolute !important;
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */

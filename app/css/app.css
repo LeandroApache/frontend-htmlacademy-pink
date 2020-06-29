@@ -1,3 +1,7 @@
+body,
+html {
+  overflow-x: hidden
+}
 .visually-hidden {
   position: absolute!important;
   clip: rect(1px 1px 1px 1px);
@@ -258,6 +262,10 @@
     background-color: #fff
   }
 }
+body,
+html {
+  overflow-x: hidden
+}
 .visually-hidden {
   position: absolute!important;
   clip: rect(1px 1px 1px 1px);
@@ -446,6 +454,10 @@
   position: relative;
   border: 3px solid #fff;
   border-radius: 100px
+}
+body,
+html {
+  overflow-x: hidden
 }
 .visually-hidden {
   position: absolute!important;
@@ -709,6 +721,10 @@
     height: 345px
   }
 }
+body,
+html {
+  overflow-x: hidden
+}
 .visually-hidden {
   position: absolute!important;
   clip: rect(1px 1px 1px 1px);
@@ -728,6 +744,62 @@
 .reset-link,
 .site-navigation__link {
   text-decoration: none
+}
+@-webkit-keyframes slideOut {
+  0% {
+    transform: translate(0,0);
+    opacity: 1
+  }
+  50% {
+    opacity: 0
+  }
+  100% {
+    transform: translatex(-100vw);
+    opacity: 0
+  }
+}
+@keyframes slideOut {
+  0% {
+    transform: translate(0,0);
+    opacity: 1
+  }
+  50% {
+    opacity: 0
+  }
+  100% {
+    transform: translatex(-100vw);
+    opacity: 0
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    transform: scale(1.2);
+    opacity: 0
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1
+  }
+}
+@keyframes fadeIn {
+  0% {
+    transform: scale(1.2);
+    opacity: 0
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1
+  }
+}
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards
 }
 .reviews {
   position: relative;
@@ -785,7 +857,13 @@
   border-left-color: #bec2c7;
   background: 0 0;
   display: none;
-  outline: 0
+  outline: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-shadow: none
 }
 .reviews__button-previous {
   left: 10px;
@@ -805,7 +883,8 @@
   border-left-color: rgba(69,69,69,.7)
 }
 .slider__element--active {
-  display: flex
+  display: flex;
+  opacity: 1
 }
 @media (min-width:660px) {
   .reviews__author {
@@ -849,5 +928,68 @@
   }
   .reviews__button {
     display: block
+  }
+}
+body,
+html {
+  overflow-x: hidden
+}
+.visually-hidden {
+  position: absolute!important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px,1px,1px,1px);
+  padding: 0!important;
+  border: 0!important;
+  height: 1px!important;
+  width: 1px!important;
+  overflow: hidden
+}
+.reset-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none
+}
+.intro__download-link,
+.reset-link,
+.site-navigation__link {
+  text-decoration: none
+}
+.slider {
+  padding-bottom: 70px
+}
+.slider__radio {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 40px;
+  display: flex
+}
+.slider__label {
+  width: 20px;
+  height: 20px;
+  position: relative
+}
+.slider__radio-indicator {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 6px;
+  height: 6px;
+  background-color: #bec2c7;
+  border-radius: 50%
+}
+.slider__input-radio:checked + .slider__radio-indicator {
+  background: 0 0;
+  border: 3px solid #283645
+}
+@media (min-width:660px) {
+  .slider__radio {
+    bottom: 20px
+  }
+}
+@media (min-width:960px) {
+  .slider__radio {
+    display: none
   }
 }
