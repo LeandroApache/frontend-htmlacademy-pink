@@ -848,7 +848,7 @@ html {
 }
 .reviews__button {
   position: absolute;
-  top: 55%;
+  top: 250px;
   width: 30px;
   height: 30px;
   box-sizing: border-box;
@@ -889,7 +889,8 @@ html {
 @media (min-width:660px) {
   .reviews__author {
     order: 1;
-    font-size: 20px
+    font-size: 20px;
+    margin-top: 40px
   }
   .reviews__text {
     font-size: 18px
@@ -961,7 +962,7 @@ html {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-  bottom: 40px;
+  bottom: 20px;
   display: flex
 }
 .slider__label {
@@ -984,12 +985,181 @@ html {
   border: 3px solid #283645
 }
 @media (min-width:660px) {
-  .slider__radio {
-    bottom: 20px
+  .slider {
+    padding-bottom: 60px
   }
 }
 @media (min-width:960px) {
   .slider__radio {
     display: none
+  }
+}
+body,
+html {
+  overflow-x: hidden
+}
+.visually-hidden {
+  position: absolute!important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px,1px,1px,1px);
+  padding: 0!important;
+  border: 0!important;
+  height: 1px!important;
+  width: 1px!important;
+  overflow: hidden
+}
+.reset-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none
+}
+.intro__download-link,
+.reset-link,
+.site-navigation__link {
+  text-decoration: none
+}
+.price {
+  padding-top: 90px;
+  padding-bottom: 100px;
+  background-image: url(../images/bg-mobile-grey-2.png);
+  background-repeat: no-repeat;
+  background-size: cover
+}
+.price__table {
+  position: relative;
+  left: -81%;
+  border-collapse: collapse;
+  width: 262.5%;
+  text-transform: uppercase;
+  text-align: center
+}
+.price__row {
+  height: 60px;
+  box-sizing: border-box
+}
+.price__row--large {
+  height: 100px;
+  color: #fff
+}
+.price__title {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 30px;
+  font-family: "Open Sans Bold",Arial,sans-serif;
+  font-weight: 700
+}
+.price__value {
+  margin: 0;
+  padding: 0;
+  margin-top: 5px;
+  font-size: 24px;
+  line-height: 30px;
+  font-family: "Open Sans Light",Arial,sans-serif
+}
+.price__data {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 60px;
+  border: 2px solid #e5e5e5;
+  box-sizing: border-box;
+  background-color: #fff
+}
+.price__data--type {
+  background-color: #283645
+}
+.price__data--hit::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 74px;
+  height: 74px;
+  background-repeat: no-repeat;
+  background-image: url(../images/mobile-hit.png)
+}
+.price__available {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: block;
+  font-size: 0;
+  width: 31px;
+  height: 21px;
+  background-image: url(../images/icon-available.svg);
+  background-repeat: no-repeat
+}
+.price__unavailable {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: block;
+  font-size: 0;
+  width: 27px;
+  height: 27px;
+  background-image: url(../images/icon-unavailable.svg);
+  background-repeat: no-repeat
+}
+.price__data--first {
+  width: 1px;
+  position: inherit;
+  box-sizing: border-box;
+  padding-bottom: 30px
+}
+.price__setting {
+  z-index: 1;
+  position: absolute;
+  left: 37%;
+  background-color: #fff;
+  color: #000;
+  font-size: 14px;
+  line-height: 30px;
+  font-family: "Open Sans Regular",Arial,sans-serif
+}
+.price__data--empty {
+  background: 0 0;
+  border: none
+}
+@media (min-width:660px) {
+  .price {
+    background-image: url(../images/bg-tablet-grey-2.png)
+  }
+  .price__table {
+    left: 0;
+    width: 94%;
+    max-width: 940px;
+    margin: 0 auto
+  }
+  .price__data--first {
+    width: auto;
+    position: relative;
+    padding: 0;
+    text-align: left;
+    text-transform: none
+  }
+  .price__setting {
+    position: relative;
+    left: 0;
+    margin-left: 24px
+  }
+  .price__available,
+  .price__unavailable {
+    left: 50%;
+    transform: translateX(-50%)
+  }
+  .price__title {
+    font-size: 16px
+  }
+  .price__value {
+    font-size: 18px
+  }
+  .price__data--hit::after {
+    background-image: url(../images/tablet-hit.png)
+  }
+}
+@media (min-width:960px) {
+  .price {
+    background-image: url(../images/bg-desktop-grey-2.png)
   }
 }
