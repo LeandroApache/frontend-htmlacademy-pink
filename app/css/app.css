@@ -67,6 +67,9 @@ html {
 .site-navigation__logo-link:hover {
   background-image: url(../images/logotype-pink-mobile.svg)
 }
+.site-navigation__logo-link:active {
+  opacity: .7
+}
 .site-navigation__button {
   position: absolute;
   top: 50%;
@@ -196,9 +199,6 @@ html {
   .site-navigation__logo-link:hover {
     background-image: url(../images/logotype-pink-tablet.svg)
   }
-  .site-navigation__logo-link:active {
-    background-image: url(../images/logotype-grey-tablet.svg)
-  }
 }
 @media (min-width:960px) {
   .site-navigation__wrapper {
@@ -215,9 +215,6 @@ html {
   }
   .site-navigation__logo-link:hover {
     background-image: url(../images/logotype-pink-desktop.svg)
-  }
-  .site-navigation__logo-link:active {
-    background-image: url(../images/logotype-grey-desktop.svg)
   }
   .site-navigation__button {
     display: none
@@ -1035,11 +1032,13 @@ html {
 }
 .price__row {
   height: 60px;
-  box-sizing: border-box
+  box-sizing: border-box;
+  background-color: #fff
 }
 .price__row--large {
   height: 100px;
-  color: #fff
+  color: #fff;
+  background: 0 0
 }
 .price__title {
   margin: 0;
@@ -1063,8 +1062,7 @@ html {
   padding: 0;
   height: 60px;
   border: 2px solid #e5e5e5;
-  box-sizing: border-box;
-  background-color: #fff
+  box-sizing: border-box
 }
 .price__data--type {
   background-color: #283645

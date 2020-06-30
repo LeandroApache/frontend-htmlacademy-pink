@@ -26,11 +26,13 @@
   height: 60px;
 
   box-sizing: border-box;
+  background-color: #fff;
 }
 
 .price__row--large {
   height: 100px;
   color: white;
+  background: none;
 }
 
 .price__title {
@@ -64,7 +66,7 @@
   border: 2px solid rgb(229, 229, 229);
   box-sizing: border-box;
 
-  background-color: #fff;
+  // background-color: #fff;
 }
 
 .price__data--type {
