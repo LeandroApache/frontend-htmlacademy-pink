@@ -1,5 +1,7 @@
-@import "scaffolding/scaffolding.scss";
-@import "fonts/fonts.scss";
+@import "global/scaffolding.scss";
+@import "global/animation.scss";
+@import "global/fonts.scss";
+
 @import "page-body/page-body.scss";
 @import "page-header/page-header.scss";
 @import "site-navigation/site-navigation.scss";
@@ -10,3 +12,7 @@
 @import "reviews/reviews.scss";
 @import "slider/slider.scss";
 @import "price/price.scss";
+@import "contacts/contacts.scss";
+
+@import "blocks/map.scss";
+@import "blocks/page-footer.scss";

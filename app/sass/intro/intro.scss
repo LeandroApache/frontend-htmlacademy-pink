@@ -1,11 +1,3 @@
-$mobile-width: 320px;
-$tablet-width: 660px;
-$desktop-width: 960px;
-$minimal-resolution-dpi: 144dpi;
-$minimal-resolution-dppx: 1.5dppx;
-
-@import "scaffolding/scaffolding.scss";
-
 .intro {
   z-index: 0;
   position: relative;

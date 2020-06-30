@@ -1,5 +1,3 @@
-@import "scaffolding/scaffolding.scss";
-
 .price {
   padding-top: 90px;
   padding-bottom: 100px;
@@ -12,6 +10,7 @@
 .price__table {
   position: relative;
   left: -81%;
+  // 0 -81 -162
 
   border-collapse: collapse;
 
@@ -128,6 +127,8 @@
   z-index: 1;
   position: absolute;
   left: 37%;
+    // 3 37 68
+
   // top: 50%;
 
   background-color: #fff;
@@ -143,7 +144,44 @@
   border: none;
 }
 
+@media (max-width: $tablet-width - 1) {
+
+  .price--left {
+    .price__table {
+      left: 0%;
+    }
+    .price__setting {
+      left: 3%;
+    }
+  }
+  .price--center {
+    .price__table {
+      left: -81%;
+    }
+    .price__setting {
+      left: 37%;
+    }
+  }
+  .price--right {
+    .price__table {
+      left: -162%;
+    }
+    .price__setting {
+      left: 68%;
+    }
+  }
+}
+
+.slider__radio {
+  bottom: 40px;
+}
+
 @media (min-width: $tablet-width) {
+
+  .slider__radio {
+    display: none;
+  }
+
   .price {
     background-image: url("../images/bg-tablet-grey-2.png");
   }
@@ -192,5 +230,9 @@
 @media (min-width: $desktop-width) {
   .price {
     background-image: url("../images/bg-desktop-grey-2.png");
+
+    &__setting {
+      font-size: 18px;
+    }
   }
 }
