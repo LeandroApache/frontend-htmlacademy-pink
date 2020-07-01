@@ -1125,6 +1125,17 @@ html {
   font-family: "Open Sans Light",Arial,sans-serif;
   color: #d22856
 }
+.contacts__email {
+  text-decoration: none
+}
+.contacts__email:hover {
+  text-decoration: underline;
+  color: #000
+}
+.contacts__email:active {
+  text-decoration: none;
+  color: rgba(0,0,0,.3)
+}
 @media (min-width:660px) {
   .contacts {
     padding-bottom: 30px
