@@ -1,0 +1,32 @@
+.copyright {
+  display: flex;
+  width: 150px;
+  align-items: center;
+
+  &__text {
+    font-family: $OpenSansRegular;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  &__link {
+    display: block;
+
+    width: 34px;
+    height: 38px;
+    margin-top: 5px;
+    margin-left: auto;
+
+    background-image: url("../images/htmlacademy-red.svg");
+    background-repeat: no-repeat;
+
+    &:hover {
+      background-image: url("../images/htmlacademy.svg");
+    }
+    &:active {
+      background-image: url("../images/htmlacademy.svg");
+      opacity: 0.3;
+    }
+  }
+
+}
