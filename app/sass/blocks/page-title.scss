@@ -1,0 +1,59 @@
+.page-title {
+  padding: 1px;
+  padding-top: 70px;
+
+  height: 235px;
+  box-sizing: border-box;
+
+  background-color: rgb(29, 38, 50);
+  background-image: url("../images/bg-mobile-no-phone@1x.png");
+  background-size: cover;
+
+  @include for-retina {
+    background-image: url("../images/bg-mobile-no-phone@2x.png");
+  }
+
+  &__title {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 30px;
+
+    width: 185px;
+
+    font-family: $OpenSansLight;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+    font-weight: 100;
+  }
+}
+
+
+@media (min-width: $tablet-width) {
+  .page-title {
+      height: 440px;
+      padding-top: 110px;
+
+      background-image: url("../images/bg-tablet-no-phone@1x.png");
+
+      @include for-retina {
+        background-image: url("../images/bg-tablet-no-phone@2x.png");
+      }
+
+      &__title {
+        width: 360px;
+
+        margin-top: 70px;
+        font-size: 50px;
+        line-height: 60px;
+      }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-title {
+    height: 490px;
+  }
+}

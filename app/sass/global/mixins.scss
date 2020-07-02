@@ -1,0 +1,5 @@
+@mixin for-retina {
+  @media (min-resolution: $minimal-resolution-dpi), (min-resolution: $minimal-resolution-dppx) {
+    @content;
+  }
+}

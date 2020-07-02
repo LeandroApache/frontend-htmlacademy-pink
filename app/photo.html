@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Pink</title>
-  <link rel="stylesheet" href="/css/app.css">
+  <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 
@@ -13,34 +13,45 @@
   <header class="page-header">
 
     <!-- Навигация -->
-    <nav class="page-header__navigation site-navigation">
+    <nav class="page-header__navigation site-navigation site-navigation--no-js">
 
-      <!-- Заголовок -->
-      <p class="site-navigation__logo">Pink</p>
 
-      <!-- Кнопка открытия меню -->
-      <button class="site-navigation__button button-open">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
+      <div class="site-navigation__wrapper">
+      <!-- Верхний контейнер -->
+        <div class="site-navigation__header">
+
+          <!-- Логотип -->
+          <p class="site-navigation__logo">
+            <a href="index.html" class="site-navigation__logo-link"></a>
+          </p>
+
+          <!-- Кнопка открытия меню -->
+          <button class="site-navigation__button button-open">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+
+          <button class="site-navigation__button button-close">
+            <span class="visually-hidden">Закрыть меню</span>
+          </button>
+        </div>
+
 
       <ul class="site-navigation__list">
         <li class="site-navigation__item">
-          <a href="" class="site-navigation__link">Главная</a>
+          <a href="index.html" class="site-navigation__link">Главная</a>
         </li>
-        <li class="site-navigation__item">
-          <a href="" class="site-navigation__link">Фотографии</a>
+        <li class="site-navigation__item item--current">
+          <a class="site-navigation__link">Фотографии</a>
         </li>
         <li class="site-navigation__item">
           <a href="" class="site-navigation__link">Конкурс</a>
         </li>
         <li class="site-navigation__item">
-          <a href="" class="site-navigation__link">HTML Academy</a>
+          <a href="https://github.com/disorientationinspace" class="site-navigation__link">Wito Divaro</a>
         </li>
       </ul>
+    </div>
 
-      <button class="site-navigation__button button-close">
-        <span class="visually-hidden">Закрыть меню</span>
-      </button>
     </nav>
   </header>
 
@@ -48,8 +59,8 @@
   <main class="page-main">
 
     <!-- интро -->
-    <section class="intro">
-      <p class="intro__title">Фотографии пользователей</p>
+    <section class="page-title">
+      <h1 class="page-title__title">Фотографии пользователей</p>
     </section>
     <!-- интро -->
 
@@ -57,95 +68,187 @@
     <section class="gallery">
       <p class="gallery__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
 
-      <div class="gallery__item item--best">
-        <p class="gallery__photo-container">
-          <a class="gallery__photo-link"><img class = "gallery__photo-image photo-image--large" src="https://via.placeholder.com/320x180" alt="" height="180" width="320"></a>
+      <div class="gallery__item gallery__item--best">
+        <p class="gallery__photo-container gallery__photo-container--best">
+          <a class="gallery__photo-link">
+            <picture>
+              <source media="(min-width: 960px)"
+                  srcset = "../images/panorama-desktop@1x.jpg 1x, ../images/panorama-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)"
+                  srcset = "../images/panorama-tablet@1x.jpg 1x, ../images/panorama-tablet@2x.jpg 2x">
+
+              <img src="../images/panorama-mobile@1x.jpg" srcset = "../images/panorama-mobile@2x.jpg 2x" class="gallery__photo-image">
+            </picture>
+          </a>
         </p>
-        <b class="gallery__author">Анна</b>
-        <time class="gallery__time">5 минут назад</time>
-        <p class="gallery__comment">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-        <button class="gallery__like-button">
-          <span class="visually-hidden">Мне нравится!</span>
-        </button>
-        <p class="gallery__like-counter">Нравится: <span class="gallery__like-value">215</span></p>
+        <div class="gallery__content gallery__content--best">
+          <b class="gallery__author">Анна
+          <time class="gallery__time">(5 минут назад)</time></b>
+          <p class="gallery__comment">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+          <div class="gallery__likes">
+            <button class="gallery__like-button">
+              <span class="visually-hidden">Мне нравится!</span>
+            </button>
+            <p class="gallery__like-counter">Нравится: <span class="gallery__like-value">215</span></p>
+          </div>
+        </div>
       </div>
 
-      <div class="gallery__item">
-        <p class="gallery__photo-container">
-          <a class="gallery__photo-link"><img class = "gallery__photo-image" src="https://via.placeholder.com/280x180" alt="" height="180" width="280"></a>
-        </p>
-        <b class="gallery__author">Левон</b>
-        <time class="gallery__time">5 часов назад</time>
-        <p class="gallery__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-        <button class="gallery__like-button">
-          <span class="visually-hidden">Мне нравится!</span>
-        </button>
-        <p class="gallery__like-counter">Нравится: <span class="gallery__like-value">356</span></p>
-      </div>
+      <div class="gallery__wrapper">
+        <div class="gallery__item">
+          <p class="gallery__photo-container">
+            <a class="gallery__photo-link">
+              <picture>
+                <source media="(min-width: 960px)"
+                    srcset = "../images/photo-1-desktop@1x.jpg 1x, ../images/photo-1-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                    srcset = "../images/photo-1-tablet@1x.jpg 1x, ../images/photo-1-tablet@2x.jpg 2x">
 
-      <div class="gallery__item">
-        <p class="gallery__photo-container">
-          <a class="gallery__photo-link"><img class = "gallery__photo-image" src="https://via.placeholder.com/280x180" alt="" height="180" width="280"></a>
-        </p>
-        <b class="gallery__author">Антон</b>
-        <time class="gallery__time">12 часов назад</time>
-        <p class="gallery__comment">Соседи будут рады!</p>
-        <button class="gallery__like-button">
-          <span class="visually-hidden">Мне нравится!</span>
-        </button>
-        <p class="gallery__like-counter">Нравится: <span class="gallery__like-value">666</span></p>
-      </div>
+                <img src="../images/photo-1-mobile@1x.jpg" srcset = "../images/photo-1-mobile@2x.jpg 2x" class="gallery__photo-image">
+              </picture>
+            </a>
+          </p>
+          <div class="gallery__content">
+            <b class="gallery__author">Левон<time class="gallery__time">(5 часов назад)</time></b>
+            <p class="gallery__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+            <div class="gallery__likes">
+              <button class="gallery__like-button">
+                <span class="visually-hidden">Мне нравится!</span>
+              </button>
+              <p class="gallery__like-counter">Нравится: <span class="gallery__like-value">215</span></p>
+            </div>
+          </div>
+        </div>
 
-      <div class="gallery__item">
-        <p class="gallery__photo-container">
-          <a class="gallery__photo-link"><img class = "gallery__photo-image" src="https://via.placeholder.com/280x180" alt="" height="180" width="280"></a>
-        </p>
-        <b class="gallery__author">Борис</b>
-        <time class="gallery__time">20 часов назад</time>
-        <p class="gallery__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
-        <button class="gallery__like-button">
-          <span class="visually-hidden">Мне нравится!</span>
-        </button>
-        <p class="gallery__like-counter">Нравится: <span class="gallery__like-value">215</span></p>
-      </div>
+        <div class="gallery__item">
+          <p class="gallery__photo-container">
+            <a class="gallery__photo-link">
+              <picture>
+                <source media="(min-width: 960px)"
+                    srcset = "../images/photo-2-desktop@1x.jpg 1x, ../images/photo-2-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                    srcset = "../images/photo-2-tablet@1x.jpg 1x, ../images/photo-2-tablet@2x.jpg 2x">
 
-      <div class="gallery__item">
-        <p class="gallery__photo-container">
-          <a class="gallery__photo-link"><img class = "gallery__photo-image" src="https://via.placeholder.com/280x180" alt="" height="180" width="280"></a>
-        </p>
-        <b class="gallery__author">Сергей</b>
-        <time class="gallery__time">25 часов назад</time>
-        <p class="gallery__comment">Самая кубанская в мире!</p>
-        <button class="gallery__like-button">
-          <span class="visually-hidden">Мне нравится!</span>
-        </button>
-        <p class="gallery__like-counter">Нравится: <span class="gallery__like-value">4</span></p>
-      </div>
+                <img src="../images/photo-2-mobile@1x.jpg" srcset = "../images/photo-2-mobile@2x.jpg 2x" class="gallery__photo-image">
+              </picture>
+            </a>
+          </p>
+          <div class="gallery__content">
+            <b class="gallery__author">Антон
+            <time class="gallery__time">(12 часов назад)</time></b>
+            <p class="gallery__comment">Соседи будут рады!</p>
+            <div class="gallery__likes">
+              <button class="gallery__like-button">
+                <span class="visually-hidden">Мне нравится!</span>
+              </button>
+              <p class="gallery__like-counter">Нравится: <span class="gallery__like-value">215</span></p>
+            </div>
+          </div>
+        </div>
 
-      <div class="gallery__item">
-        <p class="gallery__photo-container">
-          <a class="gallery__photo-link"><img class = "gallery__photo-image" src="https://via.placeholder.com/280x180" alt="" height="180" width="280"></a>
-        </p>
-        <b class="gallery__author">Максим</b>
-        <time class="gallery__time">40 часов назад</time>
-        <p class="gallery__comment">Где снег то?</p>
-        <button class="gallery__like-button">
-          <span class="visually-hidden">Мне нравится!</span>
-        </button>
-        <p class="gallery__like-counter">Нравится: <span class="gallery__like-value">150</span></p>
-      </div>
+        <div class="gallery__item">
+          <p class="gallery__photo-container">
+            <a class="gallery__photo-link">
+              <picture>
+                <source media="(min-width: 960px)"
+                    srcset = "../images/photo-3-desktop@1x.jpg 1x, ../images/photo-3-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                    srcset = "../images/photo-3-tablet@1x.jpg 1x, ../images/photo-3-tablet@2x.jpg 2x">
 
-      <div class="gallery__item">
-        <p class="gallery__photo-container">
-          <a class="gallery__photo-link"><img class = "gallery__photo-image" src="https://via.placeholder.com/280x180" alt="" height="180" width="280"></a>
-        </p>
-        <b class="gallery__author">Надежда</b>
-        <time class="gallery__time">45 часов назад</time>
-        <p class="gallery__comment">Всем GM и взаимные лайки!</p>
-        <button class="gallery__like-button">
-          <span class="visually-hidden">Мне нравится!</span>
-        </button>
-        <p class="gallery__like-counter">Нравится: <span class="gallery__like-value">2560</span></p>
+                <img src="../images/photo-3-mobile@1x.png" srcset = "../images/photo-3-mobile@2x.png 2x" class="gallery__photo-image">
+              </picture>
+            </a>
+          </p>
+          <div class="gallery__content">
+            <b class="gallery__author">Борис
+            <time class="gallery__time">(20 часов назад)</time></b>
+            <p class="gallery__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
+            <div class="gallery__likes">
+              <button class="gallery__like-button">
+                <span class="visually-hidden">Мне нравится!</span>
+              </button>
+              <p class="gallery__like-counter">Нравится: <span class="gallery__like-value">215</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery__item">
+          <p class="gallery__photo-container">
+            <a class="gallery__photo-link">
+              <picture>
+                <source media="(min-width: 960px)"
+                    srcset = "../images/photo-4-desktop@1x.jpg 1x, ../images/photo-4-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                    srcset = "../images/photo-4-tablet@1x.jpg 1x, ../images/photo-4-tablet@2x.jpg 2x">
+
+                <img src="../images/photo-4-mobile@1x.jpg" srcset = "../images/photo-4-mobile@2x.jpg 2x" class="gallery__photo-image">
+              </picture>
+            </a>
+          </p>
+          <div class="gallery__content">
+            <b class="gallery__author">Сергей
+            <time class="gallery__time">(25 часов назад)</time></b>
+            <p class="gallery__comment">Самая кубанская в мире!</p>
+            <div class="gallery__likes">
+              <button class="gallery__like-button">
+                <span class="visually-hidden">Мне нравится!</span>
+              </button>
+              <p class="gallery__like-counter">Нравится: <span class="gallery__like-value">215</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery__item">
+          <p class="gallery__photo-container">
+            <a class="gallery__photo-link">
+              <picture>
+                <source media="(min-width: 960px)"
+                    srcset = "../images/photo-5-desktop@1x.jpg 1x, ../images/photo-5-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                    srcset = "../images/photo-5-tablet@1x.jpg 1x, ../images/photo-5-tablet@2x.jpg 2x">
+
+                <img src="../images/photo-5-mobile@1x.jpg" srcset = "../images/photo-5-mobile@2x.jpg 2x" class="gallery__photo-image">
+              </picture>
+            </a>
+          </p>
+          <div class="gallery__content">
+            <b class="gallery__author">Максим
+            <time class="gallery__time">(40 часов назад)</time></b>
+            <p class="gallery__comment">Где снег то?</p>
+            <div class="gallery__likes">
+              <button class="gallery__like-button">
+                <span class="visually-hidden">Мне нравится!</span>
+              </button>
+              <p class="gallery__like-counter">Нравится: <span class="gallery__like-value">215</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery__item">
+          <p class="gallery__photo-container">
+            <a class="gallery__photo-link">
+              <picture>
+                <source media="(min-width: 960px)"
+                    srcset = "../images/photo-6-desktop@1x.jpg 1x, ../images/photo-6-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                    srcset = "../images/photo-6-tablet@1x.jpg 1x, ../images/photo-6-tablet@2x.jpg 2x">
+
+                <img src="../images/photo-6-mobile@1x.jpg" srcset = "../images/photo-6-mobile@2x.jpg 2x" class="gallery__photo-image">
+              </picture>
+            </a>
+          </p>
+          <div class="gallery__content">
+            <b class="gallery__author">Надежда
+            <time class="gallery__time">(45 часов назад)</time></b>
+            <p class="gallery__comment">Всем GM и взаимные лайки!</p>
+            <div class="gallery__likes">
+              <button class="gallery__like-button">
+                <span class="visually-hidden">Мне нравится!</span>
+              </button>
+              <p class="gallery__like-counter">Нравится: <span class="gallery__like-value">215</span></p>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- галлерея -->
 
@@ -156,48 +259,48 @@
       <!-- галлерея -->
 
 
-    <section class="photo-redactor">
-      <p class="photo-redactor__image-container">
-        <img src="" alt="" class="photo-redactor__image" width="280" height="375">
+    <section class="photo-editor">
+      <p class="photo-editor__image-container">
+        <img src="" alt="" class="photo-editor__image" width="280" height="375">
       </p>
 
-      <button class="photo-redactor__crop">
+      <button class="photo-editor__crop">
         <span class="visually-hidden">Инструмент обрезания фото</span>
       </button>
 
-      <div class="photo-redactor__range-toggle">
-        <div class="photo-redactor__scale">
-          <div class="photo-redactor__bar"></div>
+      <div class="photo-editor__range-toggle">
+        <div class="photo-editor__scale">
+          <div class="photo-editor__bar"></div>
         </div>
-        <div class="photo-redactor__range-toggle-button"></div>
+        <div class="photo-editor__range-toggle-button"></div>
       </div>
 
-      <button class="photo-redactor__contrast">
+      <button class="photo-editor__contrast">
         <span class="visually-hidden">Инструмент изменения контрастности</span>
       </button>
 
-      <div class="photo-redactor__range-toggle">
-        <div class="photo-redactor__scale">
-          <div class="photo-redactor__bar"></div>
+      <div class="photo-editor__range-toggle">
+        <div class="photo-editor__scale">
+          <div class="photo-editor__bar"></div>
         </div>
-        <div class="photo-redactor__range-toggle-button"></div>
+        <div class="photo-editor__range-toggle-button"></div>
       </div>
 
 
-      <button class="photo-redactor__contrast">
+      <button class="photo-editor__contrast">
         <span class="visually-hidden">Инструмент "заливка"</span>
       </button>
 
-      <div class="photo-redactor__range-toggle">
-        <div class="photo-redactor__scale">
-          <div class="photo-redactor__bar"></div>
+      <div class="photo-editor__range-toggle">
+        <div class="photo-editor__scale">
+          <div class="photo-editor__bar"></div>
         </div>
-        <div class="photo-redactor__range-toggle-button"></div>
+        <div class="photo-editor__range-toggle-button"></div>
       </div>
 
 
-      <a href="" class="photo-redactor__post-link rounded-link">Запостить</a>
-      <a href="" class="photo-redactor__cancel-link rounded-link">Отмена</a>
+      <a href="" class="photo-editor__post-link rounded-link">Запостить</a>
+      <a href="" class="photo-editor__cancel-link rounded-link">Отмена</a>
 
     </section>
 
@@ -206,19 +309,26 @@
 
 
   <footer class = "page-footer">
-    <img width = "150" height = "40" src="https://via.placeholder.com/150x40" alt="Логотоип PINK" class="logo page-footer__logo">
-    <ul class="social-contacts page-footer__social-contacts">
-      <li class="social-contacts__item"><a href="" class="social-contacts__link"><span class="visually-hidden">Twitter</span></a></li>
-      <li class="social-contacts__item"><a href="" class="social-contacts__link"><span class="visually-hidden">Facebook</span></a></li>
-      <li class="social-contacts__item"><a href="" class="social-contacts__link"><span class="visually-hidden">Youtube</span></a></li>
-    </ul>
+    <div class="page-footer__wrapper">
+        <a href="index.html" class="page-footer__logo">
+          <span class="visually-hidden">Логотип сайта "Пинк"</span>
+        </a>
+      <ul class="social-contacts page-footer__social-contacts">
+        <li class="social-contacts__item"><a href="" class="social-contacts__link social-contacts__link--twitter"><span class="visually-hidden">Twitter</span></a></li>
+        <li class="social-contacts__item"><a href="" class="social-contacts__link social-contacts__link--facebook"><span class="visually-hidden">Facebook</span></a></li>
+        <li class="social-contacts__item"><a href="" class="social-contacts__link social-contacts__link--youtube"><span class="visually-hidden">Youtube</span></a></li>
+      </ul>
 
-    <!-- Копирайт -->
-    <div class="copyright page-footer__copyright">
-      <p class="copyright__text">Разработано</p>
-      <a href="" class="copyright__link" src="https://htmlacademy.ru"><span class="visually-hidden">HTMLAcademy</span></a>
+      <!-- Копирайт -->
+      <div class="copyright page-footer__copyright">
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__link" href="https://htmlacademy.ru"><span class="visually-hidden">HTMLAcademy</span></a>
+      </div>
     </div>
   </footer>
+
+<script src = "js/menu.js"></script>
+<script src="js/likes.js"></script>
 
 
 </body>
