@@ -259,50 +259,58 @@
       <!-- галлерея -->
 
 
-    <section class="photo-editor">
+  <section class="photo-editor">
       <p class="photo-editor__image-container">
-        <img src="" alt="" class="photo-editor__image" width="280" height="375">
+        <picture>
+          <source media="(min-width: 960px)" srcset="../images/desktop-editor-photo@1x.jpg 1x, ../images/desktop-editor-photo@2x.jpg 2x">
+          <source media="(min-width: 660px)" srcset="../images/tablet-editor-photo@1x.jpg 1x, ../images/tablet-editor-photo@2x.jpg 2x">
+
+          <img class = "photo-editor__image" src="../images/mobile-editor-photo@1x.jpg" srcset = "../images/mobile-editor-photo@2x.jpg 2x" width = "280" height = "375">
+        </picture>
       </p>
 
-      <button class="photo-editor__crop">
+    <div class="photo-editor__menu">
+        <button class="photo-editor__crop photo-editor__button photo-editor__button--active">
+        <svg width = "44" height = "44">
+          <use href = "../images/editor-sprite.svg#icon-editor-crop"></use>
+        </svg>
         <span class="visually-hidden">Инструмент обрезания фото</span>
       </button>
 
-      <div class="photo-editor__range-toggle">
-        <div class="photo-editor__scale">
-          <div class="photo-editor__bar"></div>
-        </div>
-        <div class="photo-editor__range-toggle-button"></div>
+      <div class="photo-editor__range-toggle photo-editor__range-toggle--crop photo-editor__range-toggle--active">
+        <div class="photo-editor__scale"></div>
+        <div class="photo-editor__ranger photo-editor__ranger--crop"></div>
       </div>
 
-      <button class="photo-editor__contrast">
-        <span class="visually-hidden">Инструмент изменения контрастности</span>
-      </button>
-
-      <div class="photo-editor__range-toggle">
-        <div class="photo-editor__scale">
-          <div class="photo-editor__bar"></div>
-        </div>
-        <div class="photo-editor__range-toggle-button"></div>
-      </div>
-
-
-      <button class="photo-editor__contrast">
+      <button class="photo-editor__fill photo-editor__button">
+        <svg width = "48" height = "43">
+          <use href = "../images/editor-sprite.svg#icon-editor-fill"></use>
+        </svg>
         <span class="visually-hidden">Инструмент "заливка"</span>
       </button>
 
-      <div class="photo-editor__range-toggle">
-        <div class="photo-editor__scale">
-          <div class="photo-editor__bar"></div>
-        </div>
-        <div class="photo-editor__range-toggle-button"></div>
+      <div class="photo-editor__range-toggle photo-editor__range-toggle--fill">
+        <div class="photo-editor__scale"></div>
+        <div class="photo-editor__ranger"></div>
       </div>
 
+      <button class="photo-editor__contrast photo-editor__button">
+        <svg width = "32" height = "32">
+          <use href = "../images/editor-sprite.svg#icon-editor-contrast"></use>
+        </svg>
+        <span class="visually-hidden">Инструмент изменения контрастности</span>
+      </button>
 
-      <a href="" class="photo-editor__post-link rounded-link">Запостить</a>
-      <a href="" class="photo-editor__cancel-link rounded-link">Отмена</a>
+      <div class="photo-editor__range-toggle photo-editor__range-toggle--contrast">
+        <div class="photo-editor__scale"></div>
+        <div class="photo-editor__ranger photo-editor__ranger--contrast"></div>
+      </div>
 
-    </section>
+      <button type = "button" class="photo-editor__action-button photo-editor__action-button--post rounded-link">Запостить</button>
+      <button type = "button" class="photo-editor__action-button photo-editor__action-button--cancel rounded-link">Отмена</button>
+    </div>
+
+  </section>
 
   </main>
 
