@@ -1,4 +1,5 @@
 @font-face {
+  font-display: swap;
   font-family: "Open Sans Bold";
   src:
     url("../fonts/OpenSans-Bold.woff") format("woff"),
@@ -6,6 +7,7 @@
 }
 
 @font-face {
+  font-display: swap;
   font-family: "Open Sans Light";
   src:
     url("../fonts/OpenSans-Light.woff") format("woff"),
@@ -13,6 +15,7 @@
 }
 
 @font-face {
+  font-display: swap;
   font-family: "Open Sans Regular";
   src:
     url("../fonts/OpenSans-Regular.woff") format("woff"),
@@ -22,5 +25,5 @@
 
 
 $OpenSansRegular: "Open Sans Regular", Arial, sans-serif;
-$OpenSansBold: "Open Sans Bold", Arial, sans-serif; 
+$OpenSansBold: "Open Sans Bold", Arial, sans-serif;
 $OpenSansLight: "Open Sans Light", Arial, sans-serif;

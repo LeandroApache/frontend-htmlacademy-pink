@@ -137,12 +137,11 @@
 
 .site-navigation__item {
   position: relative;
-  margin-top: 1px;
   width: 100%;
 
   box-shadow:
-    0px 1px 0 0 rgba(0, 0, 0, 0.7),
     0px -1px 0 0 rgba(0, 0, 0, 0.7),
+    0px 1px 0 0 rgba(0, 0, 0, 0.7),
     ;
 }
 
@@ -285,12 +284,13 @@
     background: none;
 
     color: white;
+    user-select: none;
 
-    &:hover {
+    &[href]:hover {
       color: rgb(210, 40, 86);
     }
 
-    &:active {
+    &[href]:active {
       color: rgba(255, 255, 255, 0.3);
     }
   }

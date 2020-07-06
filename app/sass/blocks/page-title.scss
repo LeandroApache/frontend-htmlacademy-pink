@@ -19,7 +19,7 @@
     padding: 0;
     margin-top: 30px;
 
-    width: 185px;
+    width: 280px;
 
     font-family: $OpenSansLight;
     font-size: 24px;
@@ -43,7 +43,7 @@
       }
 
       &__title {
-        width: 360px;
+        width: 500px;
 
         margin-top: 70px;
         font-size: 50px;
@@ -54,6 +54,10 @@
 
 @media (min-width: $desktop-width) {
   .page-title {
-    height: 490px;
+    height: 390px;
+
+    &__title {
+      width: 760px;
+    }
   }
 }
