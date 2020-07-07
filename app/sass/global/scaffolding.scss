@@ -10,10 +10,6 @@ $grey: rgb(211, 211, 211);
 $middlegrey: rgb(229, 229, 229);
 $textcolor: #283645;
 
-html, body {
-	overflow-x: hidden;
-}
-
 .visually-hidden {
 	position: absolute !important;
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
