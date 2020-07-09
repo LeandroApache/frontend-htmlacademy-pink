@@ -48,7 +48,7 @@ function startwatch() {
 }
 
 function svg(done) {
-  src("app/images/*.svg")
+  return src("app/images/*.svg")
     .pipe(svgo())
     .pipe(dest("dist/images"));
   done();
@@ -62,7 +62,7 @@ function html(done) {
 }
 
 function webp(done) {
-  src(["dist/images/*.jpg", "dist/images/*.png"])
+  src(["app/images/*.jpg", "app/images/*.png"])
     .pipe(cwebp())
     .pipe(dest("dist/images"));
   done();
@@ -96,6 +96,7 @@ function fonts(done) {
   done()
 }
 
-exports.default    = parallel(fonts, html, js, styles, browsersync, startwatch);
+exports.build      = series(clear, svg, img, fonts, html, js, styles, webp)
+exports.default    = parallel(webp, browsersync, startwatch);
 exports.clear      = clear;
 exports.fonts      = fonts;
