@@ -1,4 +1,4 @@
-var fields = document.querySelectorAll(".form-section__input[js-required]");
+var fields = document.querySelectorAll(".form-section__input[name='surname'], .form-section__input[name='name'], .form-section__input[name='email']");
 var closeButtons = document.querySelectorAll(".submit-popup__submit-button");
 var form = document.querySelector(".form-section__form")
 var errorPopup = document.querySelector(".error-popup");

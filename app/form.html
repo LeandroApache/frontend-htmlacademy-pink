@@ -60,10 +60,11 @@
   <main class="page-main">
 
     <section class="page-title">
-      <p class="page-title__title">Конкурс на самое безбашенное путешествие с Пинк</p>
+      <h1 class="page-title__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
     </section>
 
     <section class="form-section">
+      <h2 class="visually-hidden">Форма для заполнения анкеты</h2>
       <p class="form-section__description-text">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!</p>
 
       <form action="https://echo.htmlacademy.ru" class="form-section__form">
@@ -72,11 +73,11 @@
         <fieldset class = "form-section__fieldset form-section__fieldset--no-borders form-section__fieldset--half-width">
           <label class="form-section__label">
             <span class="form-section__title">Фамилия:</span>
-            <input type="text" class="form-section__input" autocomplete="off" name = "surname" placeholder="Укажите фамилию *" js-required>
+            <input type="text" class="form-section__input" autocomplete="off" name = "surname" placeholder="Укажите фамилию *">
           </label>
           <label class="form-section__label">
             <span class="form-section__title">Имя:</span>
-            <input type="text" class="form-section__input" autocomplete="off"  name = "name" placeholder="Введите ваше имя *" js-required>
+            <input type="text" class="form-section__input" autocomplete="off"  name = "name" placeholder="Введите ваше имя *"
           </label>
           <label class="form-section__label">
             <span class="form-section__title">Отчество:</span>
@@ -119,7 +120,7 @@
             </label>
             <label class="form-section__label">
               <span class="form-section__title form-section__title--bottom">Адрес почты</span>
-              <input type="email" class="form-section__input" autocomplete="off" name = "email" placeholder="Введите почту *" js-required>
+              <input type="email" class="form-section__input" autocomplete="off" name = "email" placeholder="Введите почту *">
             </label>
           </div>
         </fieldset>
@@ -162,12 +163,12 @@
 
         <fieldset class="form-section__fieldset">
           <legend class="form-section__legend">Опишите свои эмоции</legend>
-          <textarea class = "form-section__textarea" name="reviews" cols="30" rows="10" width="500" height="190" placeholder = "Можно прям в красках, не стесняясь в выражениях"></textarea>
+          <textarea class = "form-section__textarea" name="reviews" cols="30" rows="10" placeholder = "Можно прям в красках, не стесняясь в выражениях"></textarea>
         </fieldset>
 
         <input type="submit" class="form-section__submit-button submit-button" value="Отправить форму">
         <small class="form-section__clarification">
-          <sup class="form-section__super">*</sup> — Обязательные <pre class = "form-section__desktop-text"> для заполнения </pre> поля
+          <sup class="form-section__super">*</sup> — Обязательные <i class = "form-section__desktop-text">&nbsp;для заполнения&nbsp;</i> поля
         </small>
 
       </form>

@@ -9,6 +9,11 @@
   width: 100%;
   max-width: 960px;
 
+  &__iframe {
+    width: 100%;
+    height: 100%;
+  }
+
     &::after {
       z-index: 1;
       position: absolute;
