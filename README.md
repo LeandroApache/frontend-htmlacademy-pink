@@ -1,18 +1,26 @@
-# Pink - вёрстка страницы
-----
+## PINK - вёрстка страницы 
+---
 
-*Использованные знания:*
+*Использованные скиллы:*
 
 * Вёрстка
   - Семантика
-  - Адаптивность (mobile-first)
   - Доступность
-* Макет из PS
+  - **Адаптивность - новый скилл**
+* **mobile first - новый скилл**
 * Flex-box
-* БЭМ
-* SASS (SCSS)
-* GULP
+* **БЭМ - новый скилл**
+* **SASS (SCSS) - новый скилл**
+* **GULP - новый скилл**
 * Кросс-браузерность
 * Веб-шрифты
+* Макет из PS
 
 ----
+
+Previous project: <a href = "https://github.com/disorientationinspace/device">Device</a> <br>
+Next project: <a href = "https://github.com/disorientationinspace/HTMLAcademy__cat-energy">Cat energy</a>
+
+----
+
+**макет от <a href = "https://htmlacademyru">HTML Academy</a>*
